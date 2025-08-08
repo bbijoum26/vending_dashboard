@@ -31,8 +31,16 @@ def extract_powder_syrup_usage(ingredients, powder_total, syrup_total):
     powder_norm = [normalize_name(p) for p in POWDER_TYPES]
     syrup_norm = [normalize_name(s) for s in SYRUP_TYPES]
 
-    used_powders = [p for p, pn in zip(POWDER_TYPES, powder_norm) if pn in ingredient_list]
-    used_syrups = [s for s, sn in zip(SYRUP_TYPES, syrup_norm) if sn in ingredient_list]
+    used_powders = []
+    for p, pn in zip(POWDER_TYPES, powder_norm):
+        # ingredient_list 중에 pn이 부분 포함되는 게 있으면 사용됨
+        if any(pn in ing for ing in ingredient_list) or any(ing in pn for ing in ingredient_list):
+            used_powders.append(p)
+
+    used_syrups = []
+    for s, sn in zip(SYRUP_TYPES, syrup_norm):
+        if any(sn in ing for ing in ingredient_list) or any(ing in sn for ing in ingredient_list):
+            used_syrups.append(s)
 
     if used_powders and powder_total > 0:
         share = powder_total / len(used_powders)

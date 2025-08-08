@@ -85,5 +85,3 @@ Order Time,Product Name,Quantity Ordered,Total Sales
 ## 📮 문의
 - 개발자: @bbijoum26
 - 피드백/이슈: [GitHub Issues](https://github.com/bbijoum26/vending_dashboard/issues)
-
-

@@ -13,6 +13,10 @@ st.title("🥤 Vending Machine Sales Dashboard")
 uploaded_files = st.file_uploader("📂 자판기 CSV 업로드", type="csv", accept_multiple_files=True)
 files = load_uploaded_or_folder_csvs(uploaded_files)
 
+if uploaded_files:  # 새로 업로드한 파일이 있다면
+    for f in uploaded_files:
+        st.success(f"✅ {f.name} 저장 완료")
+
 # 2. 카테고리 불러오기
 category_df = load_category_data()
 
@@ -30,7 +34,7 @@ if files:
 
         with tab1:
             render_overview_tab(filtered, df)
-
+ㄴ
         with tab2:
             render_top_tab(filtered)
 
