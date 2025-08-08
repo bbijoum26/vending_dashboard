@@ -48,7 +48,7 @@ def extract_powder_syrup_usage(ingredients, powder_total, syrup_total):
 
 
 # 원재료 사용량 계산
-def calculate_ingredient_usage(df, recipe_folder="C:/Users/fishr/vending_dashboard/recipe"):
+def calculate_ingredient_usage(df, recipe_folder="recipe"):
     results = []
 
     for machine in df['ParsedMachine'].unique():
