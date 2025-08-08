@@ -61,8 +61,6 @@ Order Time,Product Name,Quantity Ordered,Total Sales
 2024-06-01 09:45:00,레몬에이드,2,3000
 ```
 
-...
-
 - 파일명 규칙: `A_sales_06.csv` → A는 자판기 이름, 06은 월
 - 여러 개 업로드 시 병합됩니다.
 
@@ -87,4 +85,5 @@ Order Time,Product Name,Quantity Ordered,Total Sales
 ## 📮 문의
 - 개발자: @bbijoum26
 - 피드백/이슈: [GitHub Issues](https://github.com/bbijoum26/vending_dashboard/issues)
+
 
