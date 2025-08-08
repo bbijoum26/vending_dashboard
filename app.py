@@ -38,7 +38,7 @@ if files:
             render_time_tab(filtered)
 
         with tab4:
-            ingredient_df = calculate_ingredient_usage(df, recipe_folder="C:/Users/fishr/vending_dashboard/recipe")
+            ingredient_df = calculate_ingredient_usage(df, recipe_folder="recipe")
             if not ingredient_df.empty:
                 render_ingredient_tab(ingredient_df, selected_machine)  # ✅ 자판기 이름 넘겨줌
             else:
